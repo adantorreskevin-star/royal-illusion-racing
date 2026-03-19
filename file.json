@@ -1,0 +1,17 @@
+{
+  "name": "royal-illusion-racing",
+  "private": true,
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "mongoose": "^8.0.0",
+    "cloudinary": "^1.40.0",
+    "stripe": "^14.0.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  }
+}

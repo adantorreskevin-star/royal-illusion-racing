@@ -1,0 +1,17 @@
+royal-illusion-racing/
+│
+├── package.json
+├── /lib
+│   └── db.js
+├── /models
+│   └── Part.js
+├── /pages
+│   ├── index.js
+│   ├── inventory.js
+│   ├── booking.js
+│   └── /api
+│       ├── parts.js
+│       └── upload.js
+├── /styles
+│   └── globals.css
+└── .env.local
