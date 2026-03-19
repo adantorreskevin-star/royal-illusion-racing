@@ -1,0 +1,181 @@
+export default function RoyalIllusionsWebsite() {
+  const featuredParts = [
+    {
+      name: "Carbon Front Lip",
+      price: "$420",
+      image:
+        "https://images.unsplash.com/photo-1494905998402-395d579af36f?auto=format&fit=crop&w=1200&q=80",
+    },
+    {
+      name: "Forged Wheel Set",
+      price: "$1,850",
+      image:
+        "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=1200&q=80",
+    },
+    {
+      name: "Performance Coilovers",
+      price: "$980",
+      image:
+        "https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=1200&q=80",
+    },
+  ];
+
+  const services = [
+    "Custom parts inventory",
+    "Booking and install inquiries",
+    "Dominican-inspired brand identity",
+    "Aggressive JDM showcase layout",
+  ];
+
+  return (
+    <div className="min-h-screen bg-black text-white">
+      <section className="relative overflow-hidden border-b border-yellow-500/20">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-950 to-black" />
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage:
+            "radial-gradient(circle at 20% 30%, rgba(255,215,0,0.22), transparent 28%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.10), transparent 18%), radial-gradient(circle at 60% 75%, rgba(255,215,0,0.15), transparent 30%)",
+        }} />
+
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:px-10 lg:px-12 lg:py-28">
+          <div>
+            <div className="mb-5 inline-flex rounded-full border border-yellow-500/30 bg-yellow-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-yellow-300">
+              Royal Illusions Racing
+            </div>
+            <h1 className="text-5xl font-black uppercase leading-[0.9] tracking-tight text-white md:text-7xl">
+              Royal Style.
+              <span className="block text-yellow-300">Street Power.</span>
+            </h1>
+            <p className="mt-6 max-w-xl text-base leading-7 text-zinc-300 md:text-lg">
+              Built around your uploaded project structure, this homepage is designed for a
+              Next.js automotive brand with inventory, booking, and custom part uploads.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="#inventory"
+                className="rounded-2xl bg-yellow-400 px-6 py-3 font-bold text-black shadow-lg transition hover:scale-[1.02]"
+              >
+                View Inventory
+              </a>
+              <a
+                href="#booking"
+                className="rounded-2xl border border-zinc-700 px-6 py-3 font-semibold text-zinc-200 transition hover:bg-zinc-900"
+              >
+                Book Service
+              </a>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="absolute -left-6 top-10 h-40 w-40 rounded-full bg-yellow-400/20 blur-3xl" />
+            <div className="absolute -right-6 bottom-8 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
+            <div className="relative overflow-hidden rounded-[2rem] border border-zinc-800 bg-zinc-950 shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1611016186353-9af58c69a533?auto=format&fit=crop&w=1400&q=80"
+                alt="Performance car"
+                className="h-[520px] w-full object-cover"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/75 to-transparent p-6">
+                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-yellow-300">
+                  Black • Gold • Premium JDM
+                </p>
+                <p className="mt-2 max-w-md text-sm text-zinc-200">
+                  Your uploaded CSS uses a black and gold theme, so this concept keeps that
+                  same identity while modernizing the layout.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16 md:px-10 lg:px-12">
+        <div className="grid gap-6 md:grid-cols-4">
+          {services.map((item) => (
+            <div
+              key={item}
+              className="rounded-[1.5rem] border border-zinc-800 bg-zinc-950 p-6 text-sm font-medium text-zinc-200 shadow-lg"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="inventory" className="mx-auto max-w-7xl px-6 py-8 md:px-10 lg:px-12">
+        <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-yellow-300">
+              Inventory Preview
+            </p>
+            <h2 className="mt-2 text-3xl font-bold md:text-4xl">Featured performance parts</h2>
+          </div>
+          <p className="max-w-2xl text-sm leading-6 text-zinc-400 md:text-base">
+            This section is ready to connect to your <code className="rounded bg-zinc-900 px-2 py-1">/api/parts</code>
+            route so the inventory page can load real products from MongoDB.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {featuredParts.map((part) => (
+            <div
+              key={part.name}
+              className="overflow-hidden rounded-[2rem] border border-zinc-800 bg-zinc-950 shadow-xl"
+            >
+              <img src={part.image} alt={part.name} className="h-72 w-full object-cover" />
+              <div className="p-6">
+                <div className="flex items-center justify-between gap-3">
+                  <h3 className="text-xl font-semibold">{part.name}</h3>
+                  <span className="rounded-full bg-yellow-400 px-3 py-1 text-sm font-bold text-black">
+                    {part.price}
+                  </span>
+                </div>
+                <p className="mt-3 text-sm leading-6 text-zinc-400">
+                  Designed to be swapped with parts coming from your database model and upload API.
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="booking" className="mx-auto grid max-w-7xl gap-8 px-6 py-16 md:grid-cols-2 md:px-10 lg:px-12">
+        <div className="rounded-[2rem] border border-zinc-800 bg-zinc-950 p-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-yellow-300">Booking</p>
+          <h2 className="mt-3 text-3xl font-bold">Request a service slot</h2>
+          <p className="mt-4 leading-7 text-zinc-400">
+            Use this area for installs, consultations, tune planning, or custom build requests.
+            It matches the booking page from your folder structure.
+          </p>
+        </div>
+
+        <div className="rounded-[2rem] border border-zinc-800 bg-zinc-950 p-8 shadow-xl">
+          <form className="grid gap-4">
+            <input
+              className="rounded-2xl border border-zinc-800 bg-black px-4 py-3 outline-none placeholder:text-zinc-600"
+              placeholder="Full name"
+            />
+            <input
+              className="rounded-2xl border border-zinc-800 bg-black px-4 py-3 outline-none placeholder:text-zinc-600"
+              placeholder="Email address"
+            />
+            <input
+              className="rounded-2xl border border-zinc-800 bg-black px-4 py-3 outline-none placeholder:text-zinc-600"
+              placeholder="Vehicle / build"
+            />
+            <textarea
+              rows={5}
+              className="rounded-2xl border border-zinc-800 bg-black px-4 py-3 outline-none placeholder:text-zinc-600"
+              placeholder="What do you need done?"
+            />
+            <button
+              type="button"
+              className="rounded-2xl bg-yellow-400 px-6 py-3 font-bold text-black transition hover:scale-[1.02]"
+            >
+              Submit Request
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
+  );
+}
